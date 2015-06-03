@@ -2,12 +2,10 @@ package SGM.lib;
 
 import SGM.SGMMain;
 import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemShears;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.EntityInteractEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 

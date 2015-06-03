@@ -1,12 +1,17 @@
 package SGM;
+
+import net.minecraftforge.common.MinecraftForge;
+
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
+
 import shamprog.SGM.proxies.SGMClientProxy;
 import shamprog.SGM.proxies.SGMCommonProxy;
+
 import SGM.lib.Constants;
 import SGM.lib.ForgeEventHandler;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -19,10 +24,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @Mod (modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
 
 public class SGMMain {
-	
-
-
-	
 	
 	@Instance("SGM")
 	public static SGMMain instance;
@@ -39,7 +40,6 @@ public class SGMMain {
     	
     	MinecraftForge.EVENT_BUS.register(eventHandler);
     	
- 
     }
     
     @EventHandler
@@ -55,12 +55,7 @@ public class SGMMain {
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
  
-    }
-    
-
-    
-
-    
+    }    
 
 }
 

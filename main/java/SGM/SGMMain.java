@@ -18,6 +18,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod (modid = Constants.MODID, name = Constants.MODNAME, version = Constants.VERSION)
 
@@ -41,13 +42,13 @@ public class SGMMain {
     	
     }
     
-    @EventHandler
+	@EventHandler
     public void init(FMLInitializationEvent event) {
     	
     	//proxy.registerRenderers();
     	
     	alchemiter = new BlockAlchemiter();
-    	itemHide = new ItemHide().setUnlocalizedName("itemhide");
+    	itemHide = new ItemHide();
     	GameRegistry.addShapelessRecipe(new ItemStack(Items.leather,1), new ItemStack(Items.clay_ball), new ItemStack(itemHide));
     	GameRegistry.registerItem(itemHide, "Hide");
     	GameRegistry.registerBlock(alchemiter, "Alchemiter");

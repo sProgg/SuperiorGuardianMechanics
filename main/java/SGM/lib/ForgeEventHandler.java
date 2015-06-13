@@ -15,21 +15,22 @@ public class ForgeEventHandler {
 	public void skinninghandler(EntityInteractEvent event){
 		
 		
-		if(event.isCanceled() || !(event.target instanceof EntityCow)) {
+		if(event.isCanceled() || !(event.target instanceof EntityCow) || (event.target.isDead) == true) {
 			return;
 		}
 		
+		int cooldown = 1;
 		ItemStack heldItem = event.entityPlayer.inventory.getCurrentItem();
 		if (!(heldItem.getItem() instanceof ItemShears)) {
 			return;
 		}
 		Item Hide = SGMMain.itemHide;
 		
-		if (heldItem.stackSize == 1) {
+		if (heldItem.stackSize == 1 && cooldown < 2)  {
 			 event.entityPlayer.inventory.addItemStackToInventory(new ItemStack(Hide));
 			 event.target.attackEntityFrom(DamageSource.generic, 9);
 			 event.entityPlayer.playSound("mob.sheep.shear", 1, 1);
-			 heldItem.damageItem(10, event.entityPlayer);
+			 heldItem.damageItem(50, event.entityPlayer);
 		}
 		 else if (!event.entityPlayer.inventory.addItemStackToInventory(new ItemStack(Hide)))
          {

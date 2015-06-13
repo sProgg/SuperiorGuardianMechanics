@@ -10,6 +10,7 @@ public class ItemHide extends Item
     {
           super();
           setCreativeTab(CreativeTabs.tabMisc);
+          setUnlocalizedName("SGM:itemhide");
     }
 
     @Override

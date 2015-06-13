@@ -9,7 +9,7 @@ public class BlockAlchemiter extends Block{
 	public BlockAlchemiter() {
 		super(Material.anvil);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setBlockName("Alchemiter");
+		this.setBlockName("SGM:alchemyblock");
 		// TODO Auto-generated constructor stub
 	}
 

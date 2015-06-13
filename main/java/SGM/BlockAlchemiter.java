@@ -7,9 +7,10 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockAlchemiter extends Block{
 
 	public BlockAlchemiter() {
+	
 		super(Material.anvil);
 		this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setBlockName("SGM:alchemyblock");
+		this.setBlockName("alchemiter");
 		// TODO Auto-generated constructor stub
 	}
 
